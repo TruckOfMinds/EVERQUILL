@@ -1,0 +1,46 @@
+.nav {
+  height: 13%;
+  width: 100%;
+  padding: 0rem 4rem;
+
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: "logo items theme";
+  justify-items: center;
+  align-items: center;
+
+  background-color: var(--prim);
+  color: var(--sec);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+
+  position: sticky;
+  top: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+
+  padding: 1rem 2rem;
+  border-radius: 1000px;
+  font-size: 1.2rem;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.logo-p-svg {
+  height: 8dvh;
+  width: fit-content;
+}
+
+.quill-svg,
+.book-svg {
+  height: 2rem;
+  width: fit-content;
+}
+
+.drop-svg {
+  height: 1.2rem;
+  width: fit-content;
+}
