@@ -14,18 +14,19 @@
 }
 
 :root {
+  --text: #060222;
+  --bg: #fffdeb;
+  --prim: #466fd0;
+  --sec: #f7d2a1;
+  --acc: #000a96;
+
   height: 100dvh;
   min-height: 100dvh;
   width: 100dvw;
 
   scroll-behavior: smooth;
   overflow-x: hidden;
-
-  --text: #060222;
-  --bg: #fffdeb;
-  --prim: #466fd0;
-  --sec: #f7d2a1;
-  --acc: #000a96;
+  scrollbar-color: var(--acc), transparent;
 
   background-color: var(--bg);
   color: var(--text);
@@ -36,4 +37,5 @@ body,
   height: 100%;
   width: 100%;
   overflow-x: inherit;
+  scrollbar-color: inherit;
 }

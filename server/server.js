@@ -19,7 +19,16 @@ app.get("/messages", async (req, res) => {
   const msgs = await db.query(
     "SELECT * FROM everquill_messages ORDER BY date DESC LIMIT 50"
   );
-  return res.json(await msgs);
+
+  return res.json(msgs.rows);
+});
+
+app.get("/tags", async (req, res) => {
+  const tags = await db.query(
+    "SELECT * FROM everquill_tags ORDER BY tag_name ASC"
+  );
+
+  return res.json(tags.rows);
 });
 
 app.post("/write", (req, res) => {

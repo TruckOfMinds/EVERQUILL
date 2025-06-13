@@ -1,13 +1,13 @@
 import { Link } from "react-router";
+import "./styles/Nav.css";
 import Book from "./Book";
 import Quill from "./Quill";
-import "./styles/Nav.css";
 import LogoPlain from "./LogoPlain";
-import Paint from "./Paint";
+import Drop from "./Drop";
 
 export default function Nav() {
   return (
-    <nav className="nav grid">
+    <nav className="nav grid gap-[1rem]">
       <Link to={"/"}>
         <span className="flex items-center justify-between gap-[1rem]">
           <LogoPlain />
@@ -32,8 +32,8 @@ export default function Nav() {
       </span>
 
       <span className="nav-item theme rounded-full">
-        <Paint />
-        <h3 className="cagliostro">Change Theme</h3>
+        <Drop />
+        <h3 className="cagliostro text-[1rem]">Change Theme</h3>
       </span>
     </nav>
   );
