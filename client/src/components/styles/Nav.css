@@ -1,0 +1,6 @@
+.nav {
+  height: 15%;
+
+  background-color: var(--prim);
+  color: var(--sec);
+}
