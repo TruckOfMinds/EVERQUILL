@@ -14,3 +14,18 @@ app.get("/", (req, res) =>
     status: "yippee",
   })
 );
+
+app.get("/messages", async (req, res) => {
+  const msgs = await db.query(
+    "SELECT * FROM everquill_messages ORDER BY date DESC LIMIT 50"
+  );
+  return res.json(await msgs);
+});
+
+app.post("/write", (req, res) => {
+  const { name, tag, msg, date } = req.body; //? might not work
+  const post = db.query(
+    `INSERT INTO everquill_messages (name, tag, msg, date) VALUES ($1, $2, $3, $4)`,
+    [name, tag, msg, date]
+  );
+});
