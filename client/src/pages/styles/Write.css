@@ -2,4 +2,78 @@
   background-color: var(--sec);
   border-radius: 20px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: 20% 55% 10% 15%;
+  grid-template-areas:
+    "name tag . . ."
+    "msg msg msg msg msg"
+    ". . . . date"
+    ". . submit . .";
+
+  .name {
+    grid-area: name;
+  }
+  .tag {
+    grid-area: tag;
+    .input {
+      padding-right: 0;
+      border-right: 0.5rem solid var(--sec-l);
+    }
+  }
+  .msg {
+    grid-area: msg;
+    width: 100%;
+    height: 100%;
+    margin-top: 0.3rem;
+
+    .input {
+      max-width: unset;
+      width: 100%;
+      height: 80%;
+
+      resize: none;
+    }
+  }
+  .date {
+    grid-area: date;
+    flex-direction: row;
+    align-items: center;
+    justify-self: end;
+  }
+  .submit {
+    grid-area: submit;
+    justify-self: center;
+
+    font-size: 1.2rem;
+    background-color: var(--prim);
+    color: var(--sec-l);
+    border-radius: 1000px;
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem 4rem;
+    line-height: 75%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.label {
+  height: fit-content;
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.input {
+  background-color: var(--sec-l);
+  padding: 0.5rem;
+  border-radius: 10px;
+
+  min-width: 8rem;
+  max-width: fit-content;
 }

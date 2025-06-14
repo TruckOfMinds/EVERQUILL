@@ -1,5 +1,5 @@
 .nav {
-  height: 13%;
+  height: 12%;
   width: 100%;
   padding: 0rem 4rem;
 
@@ -27,9 +27,28 @@
   font-size: 1.2rem;
   width: fit-content;
   cursor: pointer;
+  text-decoration: transparent underline wavy 0.1rem;
+  text-underline-offset: 0.3rem;
+
+  transition: text-decoration 200ms ease-in-out;
+
+  &:hover {
+    text-decoration: underline wavy 0.1rem;
+  }
+}
+
+.logo-link {
+  transition: all 200ms ease-in-out;
+  &:hover {
+    color: var(--bg);
+    .logo-p {
+      fill: var(--bg);
+    }
+  }
 }
 
 .logo-p-svg {
+  margin-top: -0.75rem;
   height: 8dvh;
   width: fit-content;
 }
