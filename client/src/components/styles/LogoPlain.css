@@ -1,3 +1,4 @@
 .logo-p {
+  transition: fill 200ms ease-in-out;
   fill: var(--sec);
 }

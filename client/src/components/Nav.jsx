@@ -9,7 +9,7 @@ export default function Nav() {
   return (
     <nav className="nav grid gap-[1rem]">
       <Link to={"/"}>
-        <span className="flex items-center justify-between gap-[1rem]">
+        <span className="flex items-center justify-between gap-[1rem] logo-link">
           <LogoPlain />
           <h1 className="text-inherit cagliostro text-[1.5rem]">EverQuill</h1>
         </span>
