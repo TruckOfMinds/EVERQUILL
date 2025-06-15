@@ -1,0 +1,19 @@
+.ham {
+  transition: stroke 200ms ease-in-out;
+  stroke: var(--sec);
+}
+
+.ham-svg {
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    .ham {
+      stroke: var(--bg);
+    }
+  }
+
+  &:active {
+    filter: brightness(75%);
+    scale: 0.9;
+  }
+}
