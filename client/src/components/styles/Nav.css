@@ -30,20 +30,26 @@
   text-decoration: transparent underline wavy 0.1rem;
   text-underline-offset: 0.3rem;
 
-  transition: text-decoration 200ms ease-in-out;
+  transition: text-decoration 200ms ease-in-out, filter 100ms ease-in-out;
 
   &:hover {
     text-decoration: underline wavy 0.1rem;
   }
+  &:active {
+    filter: brightness(75%);
+  }
 }
 
 .logo-link {
-  transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out, filter 100ms ease-in-out;
   &:hover {
     color: var(--bg);
     .logo-p {
       fill: var(--bg);
     }
+  }
+  &:active {
+    filter: brightness(75%);
   }
 }
 

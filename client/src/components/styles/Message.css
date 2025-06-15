@@ -1,0 +1,30 @@
+.message {
+  background-color: var(--sec-l);
+
+  display: grid;
+  grid-template-areas:
+    "name tag . ."
+    "msg msg msg msg"
+    ". . . date";
+  align-items: center;
+  row-gap: 0.25rem;
+}
+
+.msg-name {
+  grid-area: name;
+  font-size: 1.25rem;
+}
+.msg-tag {
+  grid-area: tag;
+  border-radius: 1000px;
+  border-radius: 0.25rem 0.5rem;
+}
+.msg-msg {
+  grid-area: msg;
+  margin-left: 0.5rem;
+}
+.msg-date {
+  grid-area: date;
+  justify-self: end;
+  margin-right: 1rem;
+}

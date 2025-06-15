@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "./styles/Write.css";
 
 export default function Write() {
+  const SERVER = import.meta.env.VITE_SERVER;
+
   const defFormValues = {
     name: "",
     tag: null,
@@ -20,7 +22,7 @@ export default function Write() {
      */
     const pollForTags = setInterval(async () => {
       try {
-        await fetch("http://localhost:8080/tags")
+        await fetch(`${SERVER}/tags`)
           .then((response) => response.json())
           .then((json) => setTags(json));
       } catch (err) {
@@ -30,7 +32,7 @@ export default function Write() {
 
     // returns clearing to prevent overlap — also makes it repeat idk y
     return () => clearInterval(pollForTags);
-  }, []);
+  }, [SERVER]);
 
   /**
    * @function getDate
@@ -55,10 +57,20 @@ export default function Write() {
     return `${day}/${month}/${year}`;
   }
 
+  /**
+   * @function updateState
+   * @param {object} e The currently focused/changed input.
+   * @description Updates object property for the input with its new value.
+   */
   function updateState(e) {
     setEntry({ ...entry, [e.target.name]: e.target.value });
   }
 
+  /**
+   * @function sendUserData
+   * @param {object} e The form submitted.
+   * @description Sends form data to the server to be  into db
+   */
   function sendUserData(e) {
     e.preventDefault();
     try {
@@ -77,8 +89,8 @@ export default function Write() {
 
   // header and form
   return (
-    <main className="pt-[3rem] pb-[2rem] flex flex-col items-center justify-start h-3/4">
-      <h1 className=" cagliostro text-[2rem] pb-[2rem]">
+    <main className="pt-[3rem] pb-[2rem] flex flex-col items-center justify-between h-3/4">
+      <h1 className="cagliostro text-[2rem] pb-[2rem]">
         Write a Message and be Remembered Forever!
       </h1>
 
