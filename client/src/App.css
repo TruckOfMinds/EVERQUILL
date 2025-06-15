@@ -31,6 +31,14 @@
 
   background-color: var(--bg);
   color: var(--text);
+
+  & * {
+    transition: outline 50ms ease-in-out;
+    &:focus-visible {
+      outline: 2px solid var(--bg);
+      border-radius: 10px;
+    }
+  }
 }
 
 body,

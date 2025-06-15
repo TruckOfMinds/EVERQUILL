@@ -33,7 +33,7 @@ export default function Nav() {
 
       <span className="nav-item theme rounded-full">
         <Drop />
-        <h3 className="cagliostro text-[1rem]">Change Theme</h3>
+        <h3 className="cagliostro text-[1rem] w-max">Change Theme</h3>
       </span>
     </nav>
   );
