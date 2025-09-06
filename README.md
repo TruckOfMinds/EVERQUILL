@@ -2,7 +2,7 @@
 
 ## Designs
 
-I designed the logo myself however the icon with and the others are from figma's `Simple Design System` and [IconFinder](https://www.iconfinder.com/icons/11144338/soft_cozy_feather_bird_feather_quill_icon).
+I designed the logo myself, however, the quill icon within it and the other icons are from figma's `Simple Design System` and [IconFinder](https://www.iconfinder.com/icons/11144338/soft_cozy_feather_bird_feather_quill_icon).
 ![wireframes, palettes and icons](./design.png)
 
 ## SQL

@@ -74,7 +74,7 @@ export default function Write() {
   function sendUserData(e) {
     e.preventDefault();
     try {
-      fetch("http://localhost:8080/write", {
+      fetch(`${SERVER}/write`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
