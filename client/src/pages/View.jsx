@@ -29,7 +29,7 @@ export default function View() {
   }, [setTagStyle, SERVER]);
 
   return (
-    <main className="pt-[3rem] pb-[2rem] flex flex-col items-center justify-between h-3/4 gap-4">
+    <main className="pt-[3rem] pb-[2rem] flex flex-col items-center h-3/4 gap-4">
       <h1 className="cagliostro text-[2rem] pb-[2rem]">
         View our Previous Guests!
       </h1>
