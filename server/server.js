@@ -17,7 +17,7 @@ app.get("/", (req, res) =>
 
 app.get("/messages", async (req, res) => {
   const msgs = await db.query(
-    "SELECT * FROM everquill_messages ORDER BY date DESC LIMIT 50"
+    "SELECT * FROM everquill_messages ORDER BY id DESC LIMIT 50"
   );
 
   return res.json(msgs.rows);

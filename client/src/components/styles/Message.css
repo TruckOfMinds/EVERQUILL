@@ -8,6 +8,8 @@
     ". . . date";
   align-items: center;
   row-gap: 0.25rem;
+
+  transition: scale 150ms ease-in-out;
 }
 
 .msg-name {
